@@ -1,0 +1,33 @@
+{
+    "apiVersion": "v1",
+    "kind": "Service",
+    "metadata": {
+        "creationTimestamp": "2017-08-01T13:23:20Z",
+        "labels": {
+            "run": "hello-node7"
+        },
+        "name": "hello-node7",
+        "namespace": "default",
+        "resourceVersion": "41204",
+        "selfLink": "/api/v1/namespaces/default/services/hello-node7",
+        "uid": "9655d8d9-76bc-11e7-b65c-00155d44f201"
+    },
+    "spec": {
+        "clusterIP": "10.0.0.80",
+        "ports": [
+            {
+                "port": 8080,
+                "protocol": "TCP",
+                "targetPort": 8080
+            }
+        ],
+        "selector": {
+            "run": "hello-node7"
+        },
+        "sessionAffinity": "None",
+        "type": "NodePort"
+    },
+    "status": {
+        "loadBalancer": {}
+    }
+}
